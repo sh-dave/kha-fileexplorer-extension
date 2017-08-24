@@ -6,7 +6,10 @@
 - [x] flash (via [air](https://code.google.com/archive/p/haxeair3))
 - [x] debug html (KodeStudio)
 - [ ] html
-- [ ] Kore
+- [ ] Kore (via [kore-filesystem-extension](https://github.com/sh-dave/kore-filesystem-extension))
+  - [x] windows
+  - [ ] linux
+  - [ ] macos
 - [ ] Krom
 
 ## usage
