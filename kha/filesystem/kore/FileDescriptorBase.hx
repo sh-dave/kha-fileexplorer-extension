@@ -17,10 +17,18 @@ class FileDescriptorBase {
 	}
 
 	public function _browseForOpen( title: String, then: String -> Void ) {
-		untyped __cpp__('Kore::FileSystem::FileDescriptor::browseForOpen(title.__WCStr(), then);');
+		var path = untyped __cpp__('::String(Kore::FileSystem::FileDescriptor::browseForOpen(title.__WCStr()));');
+		
+		if (path != null) {
+			then(path);
+		}
 	}
 
 	public function _browseForSave( title: String, then: String -> Void ) {
-		untyped __cpp__('Kore::FileSystem::FileDescriptor::browseForSave(title.__WCStr(), then);');
+		var path = untyped __cpp__('::String(Kore::FileSystem::FileDescriptor::browseForSave(title.__WCStr()));');
+		
+		if (path != null) {
+			then(path);
+		}
 	}	
 }
