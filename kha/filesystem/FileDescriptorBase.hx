@@ -9,6 +9,10 @@ typedef FileDescriptorBase = kha.filesystem.air.FileDescriptorBase;
 typedef FileDescriptorBase = kha.filesystem.debug_html5.FileDescriptorBase;
 #end
 
+#if kha_html5
+typedef FileDescriptorBase = kha.filesystem.html5.FileDescriptorBase;
+#end
+
 #if kha_kore
 typedef FileDescriptorBase = kha.filesystem.kore.FileDescriptorBase;
 #end
