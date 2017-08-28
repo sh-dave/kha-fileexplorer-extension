@@ -8,6 +8,18 @@ class FileDescriptorBase {
 	}
 
 	public function _browseForOpen( title: String, then: String -> Void ) {
+		//trace('creating filebrowser element');
+		//var element = js.Browser.document.createInputElement();
+		//element.type = 'file';
+		//element.addEventListener("change", function( _ ) {
+			//trace("change change change");
+		//});
+//
+		//// js.Browser.document.body.appendChild(element);
+		//element.dispatchEvent(new js.html.MouseEvent("click"));
+		//// element.remove();
+		//trace('/creating filebrowser element');
+		
 		throw 'kha.filesystem.html5.FileDescriptorBase._browseForOpen not implemented';
 	}
 
