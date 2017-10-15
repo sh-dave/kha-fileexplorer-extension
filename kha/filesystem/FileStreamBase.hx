@@ -16,3 +16,16 @@ typedef FileStreamBase = kha.filesystem.html5.FileStreamBase;
 #if kha_kore
 typedef FileStreamBase = kha.filesystem.kore.FileStreamBase;
 #end
+
+#if kha_krom
+class FileStreamBase {
+	public function new( fd: FileDescriptorBase ) {
+	}
+
+	public function writeString( s: String ) {		
+	}
+
+	public function close() {		
+	}
+}
+#end
