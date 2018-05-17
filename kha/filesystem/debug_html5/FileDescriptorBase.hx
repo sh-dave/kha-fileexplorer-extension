@@ -12,8 +12,10 @@ class FileDescriptorBase {
 		untyped __js__('
 			const { dialog } = require("electron").remote;
 			const selectedFile = dialog.showOpenDialog({ properties: ["openFile"] });
-			console.log(selectedFile);
-			then(selectedFile[0]);
+
+			if (selectedFile) {
+				then(selectedFile[0]);
+			}
 		');		
 	}
 
@@ -22,7 +24,10 @@ class FileDescriptorBase {
 		untyped __js__('
 			const { dialog } = require("electron").remote;
 			const selectedFile = dialog.showSaveDialog({ properties: ["saveFile"] });
-			then(selectedFile);
+
+			if (selectedFile) {
+				then(selectedFile);
+			}
 		');		
 	}	
 }
