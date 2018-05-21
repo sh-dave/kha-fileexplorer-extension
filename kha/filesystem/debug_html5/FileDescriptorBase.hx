@@ -1,5 +1,7 @@
 package kha.filesystem.debug_html5;
 
+import electron.main.Dialog;
+
 class FileDescriptorBase {
 	public var url(default, null): String;
 
@@ -9,14 +11,19 @@ class FileDescriptorBase {
 
 	// TODO (DK) why selectedFile[0]?
 	public function _browseForOpen( title: String, then: String -> Void ) {
-		untyped __js__('
-			const { dialog } = require("electron").remote;
-			const selectedFile = dialog.showOpenDialog({ properties: ["openFile"] });
+		var files = Dialog.showOpenDialog({
+			properties: ['openFile']
+		});
 
-			if (selectedFile) {
-				then(selectedFile[0]);
-			}
-		');		
+		trace(files);
+		// untyped __js__('
+		// 	const { dialog } = require("electron").remote;
+		// 	const selectedFile = dialog.showOpenDialog({ properties: ["openFile"] });
+
+		// 	if (selectedFile) {
+		// 		then(selectedFile[0]);
+		// 	}
+		// ');		
 	}
 
 	// TODO (DK) why NOT selectedFile[0]?
