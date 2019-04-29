@@ -1,5 +1,5 @@
 {
-	"name" : "kha-filesystem-extension",
-	"url" : "https://github.com/sh-dave/kha-filesystem-extension",
+	"name" : "kha-fileexplorer-extension",
+	"url" : "https://github.com/sh-dave/kha-fileexplorer-extension",
 	"license" : "zlib"
 }

@@ -1,21 +1,21 @@
-# kha-filesystem-extension
-
-- WARNING: unstable api
+# kha-fileexplorer-extension
 
 ## targets
+
 - [x] flash (via [air](https://code.google.com/archive/p/haxeair3))
 - [x] debug html (KodeStudio)
 - [ ] html
-- [ ] Kore (via [kore-filesystem-extension](https://github.com/sh-dave/kore-filesystem-extension))
+- [ ] Kore (via [kore-fileexplorer-extension](https://github.com/sh-dave/kore-fileexplorer-extension))
   - [x] windows
   - [ ] linux
   - [ ] macos
 - [ ] Krom
 
 ## usage
+
 ```haxe
-import kha.filesystem.FileDescriptor;
-import kha.filesystem.FileStream;
+import kha.fileexplorer.FileDescriptor;
+import kha.fileexplorer.FileStream;
 
 function browseForAnExistingFile() {
 	FileDescriptor.browseForOpen('Open something', function( url: String ) {

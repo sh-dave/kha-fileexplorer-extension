@@ -1,4 +1,4 @@
-package kha.filesystem.air;
+package kha.filexplorer;
 
 import flash.events.Event;
 import flash.filesystem.File; // requires air3 on haxelib and only runs with air
@@ -15,7 +15,7 @@ class FileDescriptorBase extends File {
 		addEventListener(Event.SELECT, onSelect);
 		browseForOpen(title);
 	}
-	
+
 	public inline function _browseForSave( title: String, then: String -> Void ) {
 		var self = this;
 

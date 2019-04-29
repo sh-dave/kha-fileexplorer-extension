@@ -1,6 +1,6 @@
-package kha.filesystem.kore;
+package kha.fileexplorer;
 
-@:headerCode('#include <Kore/FileSystem/FileDescriptor.hpp>')
+@:headerCode('#include <Kore/FileExplorer/FileDescriptor.hpp>')
 
 //namespace Kore { namespace FileSystem {
 	//struct FileDescriptor {
@@ -17,18 +17,18 @@ class FileDescriptorBase {
 	}
 
 	public function _browseForOpen( title: String, then: String -> Void ) {
-		var path = untyped __cpp__('::String(Kore::FileSystem::FileDescriptor::browseForOpen(title.__WCStr()));');
-		
+		var path = untyped __cpp__('::String(Kore::FileExplorer::FileDescriptor::browseForOpen(title.__WCStr()));');
+
 		if (path != null) {
 			then(path);
 		}
 	}
 
 	public function _browseForSave( title: String, then: String -> Void ) {
-		var path = untyped __cpp__('::String(Kore::FileSystem::FileDescriptor::browseForSave(title.__WCStr()));');
-		
+		var path = untyped __cpp__('::String(Kore::FileExplorer::FileDescriptor::browseForSave(title.__WCStr()));');
+
 		if (path != null) {
 			then(path);
 		}
-	}	
+	}
 }
